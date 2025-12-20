@@ -1,0 +1,109 @@
+{
+  "name": "My workflow 1 Chat Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a937ed3a-0856-4115-b88b-f0474dc27000",
+      "name": "When chat message received",
+      "webhookId": "53e60ee5-c5a1-438f-bb08-7c725dfde33d"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        272,
+        0
+      ],
+      "id": "f7cdf6d2-6f18-438f-8462-bd7b0bcbab6f",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        80,
+        208
+      ],
+      "id": "b4369a25-a711-4e33-88ef-07001b2899f4",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "G7UBvsbqfgxWnvjw",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        288,
+        208
+      ],
+      "id": "2c3c4b6f-c537-4074-87d0-7107c0f78e31",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "14f6e16e-26ea-4d02-a1cc-6424f3b853de",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "af39a859bca0370a90aa3c9731fdde1d60f9e31027e349ec153ac5d4952155f4"
+  },
+  "id": "mmyf6IBxPJm9Q7bx",
+  "tags": []
+}

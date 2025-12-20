@@ -1,0 +1,52 @@
+{
+  "name": "My workflow 5 Email Parser",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {
+          "sender": "muhammad.tayyab@mercurialminds.com"
+        }
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "d36b52cc-69f4-4f5f-8185-40c6db44ef54",
+      "name": "Gmail Trigger",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "T5jOSbKUj1eYCBof",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "119e8ec9-e8e4-45f1-b909-a06fc4e77437",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "af39a859bca0370a90aa3c9731fdde1d60f9e31027e349ec153ac5d4952155f4"
+  },
+  "id": "JlASFA1piVqlrqjy",
+  "tags": []
+}

@@ -1,0 +1,415 @@
+{
+  "name": "My workflow 6 Data Tables",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3624c9e7-5c9e-460c-8ed8-79fd744ef867",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZVd9LNO9gmJRty3z",
+          "mode": "list",
+          "cachedResultName": "Employee_DT",
+          "cachedResultUrl": "/projects/7WAEiVXxL55t0ORK/datatables/ZVd9LNO9gmJRty3z"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Age": 20,
+            "Gender": "Female",
+            "Name": "Alexa"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Age",
+              "displayName": "Age",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Gender",
+              "displayName": "Gender",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "cc6135c0-6a2f-4b9d-bc49-4d2ad61d9647",
+      "name": "Insert row"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZVd9LNO9gmJRty3z",
+          "mode": "list",
+          "cachedResultName": "Employee_DT",
+          "cachedResultUrl": "/projects/7WAEiVXxL55t0ORK/datatables/ZVd9LNO9gmJRty3z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyValue": "2"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "Charlotte"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Age",
+              "displayName": "Age",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Gender",
+              "displayName": "Gender",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "83e36992-4934-4e45-9196-86340763a35a",
+      "name": "Update row(s)"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZVd9LNO9gmJRty3z",
+          "mode": "list",
+          "cachedResultName": "Employee_DT",
+          "cachedResultUrl": "/projects/7WAEiVXxL55t0ORK/datatables/ZVd9LNO9gmJRty3z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyValue": "3"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "test"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Age",
+              "displayName": "Age",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Gender",
+              "displayName": "Gender",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        672,
+        0
+      ],
+      "id": "072cff03-b3a2-44e5-9fbb-7d71f1aba215",
+      "name": "Upsert row(s)"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZVd9LNO9gmJRty3z",
+          "mode": "list",
+          "cachedResultName": "Employee_DT",
+          "cachedResultUrl": "/projects/7WAEiVXxL55t0ORK/datatables/ZVd9LNO9gmJRty3z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyValue": "3"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Age": 23,
+            "Gender": "Female"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Age",
+              "displayName": "Age",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Gender",
+              "displayName": "Gender",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        896,
+        0
+      ],
+      "id": "89d12190-f0ad-4759-afec-f9c3505caff3",
+      "name": "Upsert row(s)1"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZVd9LNO9gmJRty3z",
+          "mode": "list",
+          "cachedResultName": "Employee_DT",
+          "cachedResultUrl": "/projects/7WAEiVXxL55t0ORK/datatables/ZVd9LNO9gmJRty3z"
+        },
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        0
+      ],
+      "id": "98708362-71cd-42b9-a92a-8b2d213c836e",
+      "name": "Get row(s)"
+    },
+    {
+      "parameters": {
+        "operation": "deleteRows",
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZVd9LNO9gmJRty3z",
+          "mode": "list",
+          "cachedResultName": "Employee_DT",
+          "cachedResultUrl": "/projects/7WAEiVXxL55t0ORK/datatables/ZVd9LNO9gmJRty3z"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyValue": "3"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        1344,
+        0
+      ],
+      "id": "bf97941b-335d-4c35-9d8d-b59f8cb19183",
+      "name": "Delete row(s)"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Insert row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert row": {
+      "main": [
+        [
+          {
+            "node": "Update row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row(s)": {
+      "main": [
+        [
+          {
+            "node": "Upsert row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upsert row(s)": {
+      "main": [
+        [
+          {
+            "node": "Upsert row(s)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upsert row(s)1": {
+      "main": [
+        [
+          {
+            "node": "Get row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s)": {
+      "main": [
+        [
+          {
+            "node": "Delete row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1d2f2596-470c-4c63-9254-a0b5e739836a",
+  "meta": {
+    "instanceId": "af39a859bca0370a90aa3c9731fdde1d60f9e31027e349ec153ac5d4952155f4"
+  },
+  "id": "71izkKFIYngvBIL2",
+  "tags": []
+}
